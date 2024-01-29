@@ -7,8 +7,8 @@ pub fn walk_dir(apath: String) -> Vec<String> {
     let mut keeper_vec = Vec::new();
     // let mut idx = 0;
     let ext_list = ["pdf", "PDF"];
-    let bmp_path = "media/pipi/0123-4567/BMP/".to_string();
-    let png_path = "media/pipi/0123-4567/PNG/".to_string();
+    let bmp_path = "/media/pipi/0123-4567/BMP/".to_string();
+    let png_path = "/media/pipi/0123-4567/PNG/".to_string();
 
 
     for e in WalkDir::new(apath)
