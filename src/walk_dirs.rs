@@ -7,9 +7,9 @@ pub fn walk_dir(apath: String) -> Vec<String> {
     let mut keeper_vec = Vec::new();
     // let mut idx = 0;
     let ext_list = ["pdf", "PDF"];
-    let bmp_path = "/media/pipi/USB01/BMP/".to_string();
-    let png_path = "/media/pipi/USB01/PNG/".to_string();
-    let jpg_path = "/media/pipi/USB01/JPG/".to_string();
+    let bmp_path = "/media/pipi/taz/BMP/".to_string();
+    let png_path = "/media/pipi/taz/PNG/".to_string();
+    let jpg_path = "/media/pipi/taz/JPG/".to_string();
 
 
     for e in WalkDir::new(apath)
@@ -55,7 +55,7 @@ pub fn walk_dir(apath: String) -> Vec<String> {
                 let mut f = std::fs::File::create(new_path).unwrap();
                 f.write_all(&buffer).unwrap();
             } else {
-                print!("FUCK")
+                print!("{}", fname)
             }
 
             if ext_list.contains(ext) {
