@@ -3,13 +3,18 @@ use std::io::Write;
 use walkdir::WalkDir;
 
 
-pub fn walk_dir(apath: String) -> Vec<String> {
-    let mut keeper_vec = Vec::new();
+pub fn walk_dir(apath: String) {
+    // let mut keeper_vec = Vec::new();
     // let mut idx = 0;
-    let ext_list = ["pdf", "PDF"];
-    let bmp_path = "/media/pipi/taz/BMP/".to_string();
-    let png_path = "/media/pipi/taz/PNG/".to_string();
-    let jpg_path = "/media/pipi/taz/JPG/".to_string();
+    // let ext_list = ["pdf", "PDF"];
+    let bmp_path = "/media/pipi/0123-4567/BMP/".to_string();
+    std::fs::create_dir_all(bmp_path.clone()).unwrap();
+
+    let png_path = "/media/pipi/0123-4567/PNG/".to_string();
+    std::fs::create_dir_all(png_path.clone()).unwrap();
+
+    let jpg_path = "/media/pipi/0123-4567/JPG/".to_string();
+    std::fs::create_dir_all(jpg_path.clone()).unwrap();
 
 
     for e in WalkDir::new(apath)
@@ -58,12 +63,12 @@ pub fn walk_dir(apath: String) -> Vec<String> {
                 print!("{}", fname)
             }
 
-            if ext_list.contains(ext) {
-                keeper_vec.push(fname.clone());
-            };
+            // if ext_list.contains(ext) {
+            //     keeper_vec.push(fname.clone());
+            // };
         };
     }
     // println!("Total files: {}\n", idx);
 
-    keeper_vec
+    // keeper_vec
 }
