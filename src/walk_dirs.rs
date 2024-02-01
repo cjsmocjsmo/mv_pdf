@@ -7,13 +7,13 @@ pub fn walk_dir(apath: String) {
     // let mut keeper_vec = Vec::new();
     // let mut idx = 0;
     // let ext_list = ["pdf", "PDF"];
-    let bmp_path = "/media/pipi/0123-4567/BMP/".to_string();
+    let bmp_path = "/media/pipi/USB01/BMP/".to_string();
     std::fs::create_dir_all(bmp_path.clone()).unwrap();
 
-    let png_path = "/media/pipi/0123-4567/PNG/".to_string();
+    let png_path = "/media/pipi/USB01/PNG/".to_string();
     std::fs::create_dir_all(png_path.clone()).unwrap();
 
-    let jpg_path = "/media/pipi/0123-4567/JPG/".to_string();
+    let jpg_path = "/media/pipi/USB01/JPG/".to_string();
     std::fs::create_dir_all(jpg_path.clone()).unwrap();
 
 
@@ -26,6 +26,7 @@ pub fn walk_dir(apath: String) {
 
             
             let fname = e.path().to_string_lossy().to_string();
+            println!("{}", fname);
             let ext_split = fname.split(".").collect::<Vec<&str>>();
             let ext = ext_split.last().unwrap();
 
