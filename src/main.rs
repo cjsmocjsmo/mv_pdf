@@ -4,7 +4,7 @@ pub mod walk_dirs;
 fn main() {
     // let bmp_path = "media/pipi/0123-4567/BMP/";
     // let png_path = "media/pipi/0123-4567/PNG/";
-    let apath = "/media/pipi/taz/PicCD3".to_string();
+    let apath = "/media/pipi/0123-4567/PicCD2".to_string();
 
 
 
