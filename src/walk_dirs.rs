@@ -4,9 +4,6 @@ use walkdir::WalkDir;
 
 
 pub fn walk_dir(apath: String) {
-    // let mut keeper_vec = Vec::new();
-    // let mut idx = 0;
-    // let ext_list = ["pdf", "PDF"];
     let bmp_path = "/media/pipi/0123-4567/ALLBMP/".to_string();
     std::fs::create_dir_all(bmp_path.clone()).unwrap();
 
@@ -63,13 +60,6 @@ pub fn walk_dir(apath: String) {
             } else {
                 print!("{}", fname)
             }
-
-            // if ext_list.contains(ext) {
-            //     keeper_vec.push(fname.clone());
-            // };
         };
     }
-    // println!("Total files: {}\n", idx);
-
-    // keeper_vec
 }
